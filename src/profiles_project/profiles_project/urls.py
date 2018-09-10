@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from profilesapi import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^user/$', views.user),
+    url(r'^song/$', views.song),
+    url(r'^album/$', views.album),
+    url(r'^genre/$', views.genre),
+    url(r'^artist/$', views.artist),
+    url(r'^playlist/$', views.playlist),
+    url(r'^playlist_song/$', views.playlist_song),
+    url(r'^rating/$', views.rating),
+    url(r'^Recommendation/$', views.Recommendation),
+    url(r'^autoget/$', views.autoget)
 ]
